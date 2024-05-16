@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.122.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Front-end deployment :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1708420257" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1708420257" rel="stylesheet">
-    <link href="/css/hybrid.css?1708420257" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1708420257" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1708420257" rel="stylesheet">
-    <link href="/css/auto-complete.css?1708420257" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1708420257" rel="stylesheet">
-    <link href="/css/theme.css?1708420257" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1708420257" rel="stylesheet">
+    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
+    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
+    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
+    <link href="/css/theme.css?1715874358" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1708420257" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1708420257"></script>
+    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1708420257"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1708420257"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1708420257"></script>
+<script type="text/javascript" src="/js/search.js?1715874358"></script>
 
     
   </div>
@@ -109,7 +109,7 @@
   
     
     <li data-nav-id="/2-front-end-deployment/" title="Front-end deployment" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>20-02-2024</font></i>
+        <i><font color=orange>17-05-2024</font></i>
     </left>
     <left>
         <br>
@@ -661,69 +661,60 @@
 
 	<p>In the first step in this workshop, we will host the web application (front-end) with S3 Static website hosting:</p>
 <ol>
-<li>Open <a href="https://s3.console.aws.amazon.com/s3/get-started?region=ap-southeast-2">Amazon S3 console</a></li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-1.png?featherlight=false&amp;width=90pc" alt="S3Console"></p>
-<ol start="2">
-<li>Click <strong>Create bucket</strong></li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-2.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
-<ol start="3">
-<li>Enter bucket name, such as: <strong>fcj-book-store</strong></li>
-</ol>
+<li>
+<p>Open <a href="https://s3.console.aws.amazon.com/s3/get-started?region=ap-southeast-2">Amazon S3 console</a>, then Click <strong>Create bucket</strong>
+<img src="/images/1/1.png?width=90pc" alt="S3Console"></p>
+</li>
+<li>
+<p>Enter bucket name, such as: <strong>fcj-book-shop</strong></p>
 <ul>
-<li>Select the region closest to you</li>
+<li>Select the region closest to you
+<img src="/images/1/2.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-3.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
-<ol start="4">
-<li>Uncheck block from allowing public access</li>
-</ol>
+</li>
+<li>
+<p>Uncheck block from allowing public access</p>
 <ul>
-<li>Check to <strong>I acknowledge that the current settings might result in this bucket and the objects within becoming public</strong></li>
+<li>Check to <strong>I acknowledge that the current settings might result in this bucket and the objects within becoming public</strong>
+<img src="/images/1/3.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-4.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
-<ol start="5">
-<li>Click <strong>Create bucket</strong> button</li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-5.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
-<ol start="6">
-<li>Click on created bucket</li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-6.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
-<ol start="7">
-<li>Click <strong>Properties</strong> tab</li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-7.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="8">
-<li>Scroll down to the bottom, click <strong>Edit</strong> in <strong>Static web hosting</strong> pattern</li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-8.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="9">
-<li>Select <strong>Enable</strong> to enable host web static on S3</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Create bucket</strong> button
+<img src="/images/1/4.png?width=90pc" alt="S3Console"></p>
+</li>
+<li>
+<p>Click on created bucket, click <strong>Properties</strong> tab
+<img src="/images/1/5.png?width=90pc" alt="S3Console"></p>
+</li>
+<li>
+<p>Scroll down to the bottom, click <strong>Edit</strong> in <strong>Static web hosting</strong> pattern
+<img src="/images/1/6.png?width=90pc" alt="S3Console"></p>
+</li>
+<li>
+<p>Select <strong>Enable</strong> to enable host web static on S3</p>
 <ul>
 <li>Select <strong>Host a static website</strong> for <strong>Hosting type</strong></li>
-<li>Enter <strong>index.html</strong> for <strong>Index document</strong> pattern</li>
+<li>Enter <strong>index.html</strong> for <strong>Index document</strong> pattern
+<img src="/images/1/7.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-9.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="10">
-<li>Click <strong>Save changes</strong></li>
-</ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-10.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
+</li>
+<li>
+<p>Click <strong>Save changes</strong></p>
 <ul>
-<li>After successfully enabling, please write down the path of the web</li>
+<li>After successfully enabling, please write down the path of the web
+<img src="/images/1/8.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-11.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="11">
-<li>Select <strong>Permissions</strong> tab</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Permissions</strong> tab</p>
 <ul>
-<li>Click <strong>Edit</strong> of <strong>Bucket policy</strong> pattern</li>
+<li>Click <strong>Edit</strong> of <strong>Bucket policy</strong> pattern
+<img src="/images/1/9.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-12.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="12">
-<li>Copy the below code block to <strong>Policy</strong></li>
-</ol>
+</li>
+<li>
+<p>Copy the below code block to <strong>Policy</strong></p>
 <pre tabindex="0"><code>{
     &#34;Version&#34;: &#34;2012-10-17&#34;,
     &#34;Statement&#34;: [
@@ -732,39 +723,42 @@
             &#34;Effect&#34;: &#34;Allow&#34;,
             &#34;Principal&#34;: &#34;*&#34;,
             &#34;Action&#34;: &#34;s3:GetObject&#34;,
-            &#34;Resource&#34;: &#34;arn:aws:s3:::fcj-book-store/*&#34;
+            &#34;Resource&#34;: &#34;arn:aws:s3:::fcj-book-shop/*&#34;
         }
     ]
 }
 </code></pre><ul>
-<li>Click <strong>Save changes</strong></li>
+<li>Click <strong>Save changes</strong>
+<img src="/images/1/10.png?width=90pc" alt="S3Console"></li>
 </ul>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-13.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
-<ol start="13">
-<li>Download <strong>fcj-serverless-frontend</strong> code to device</li>
-</ol>
+</li>
+<li>
+<p>Download <strong>fcj-serverless-frontend</strong> code to device</p>
 <ul>
 <li>Open command-line/terminal in the folder where you want to save the source code</li>
-<li>Copy the below commands</li>
-</ul>
+<li>Copy the below commands
 <pre tabindex="0"><code>git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-Workshop.git
-cd fcj-serverless-frontend
-npm install
+cd FCJ-Serverless-Workshop
+npm install --force
 yarn build
-</code></pre><ol start="14">
-<li>We have finished building the front-end. Next execute the following command to upload the <strong>build</strong> folder to S3</li>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>We have finished building the front-end. Next execute the following command to upload the <strong>build</strong> folder to S3</p>
+<pre tabindex="0"><code>aws s3 cp build s3://fcj-book-shop --recursive
+</code></pre></li>
 </ol>
-<pre tabindex="0"><code>aws s3 cp build s3://fcj-book-store --recursive
-</code></pre><p>
+<p>
 <div class="notices note" ><p>If your upload fails, configure the access key ID, secret access key, aws region and output format with <strong>aws configure</strong> command</p>
 </div>
 
-Result after uploading:</p>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-14.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
+Result after uploading:
+<img src="/images/1/12.png?width=90pc" alt="S3Console"></p>
 <ol start="15">
-<li>Paste the web link you take notes into your web browser</li>
+<li>Paste the web link you take notes into your web browser
+<img src="/images/1/13.png?width=90pc" alt="S3Console"></li>
 </ol>
-<p><img src="/images/2-front-end-deployment/2-front-end-deployment-15.png?featherlight=false&amp;width=90pc" alt="SettingBucket"></p>
 <p>Your application currently has no data returned. To get data from DynamoDB, go to the next section.</p>
 
 
@@ -1060,19 +1054,19 @@ Result after uploading:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1708420257"></script>
-    <script src="/js/jquery.sticky.js?1708420257"></script>
-    <script src="/js/featherlight.min.js?1708420257"></script>
-    <script src="/js/highlight.pack.js?1708420257"></script>
+    <script src="/js/clipboard.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
+    <script src="/js/jquery.sticky.js?1715874358"></script>
+    <script src="/js/featherlight.min.js?1715874358"></script>
+    <script src="/js/highlight.pack.js?1715874358"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1708420257"></script>
-    <script src="/js/learn.js?1708420257"></script>
-    <script src="/js/hugo-learn.js?1708420257"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
+    <script src="/js/learn.js?1715874358"></script>
+    <script src="/js/hugo-learn.js?1715874358"></script>
 
-    <link href="/mermaid/mermaid.css?1708420257" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1708420257"></script>
+    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1715874358"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.122.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Setting and enable CORS :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1708420257" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1708420257" rel="stylesheet">
-    <link href="/css/hybrid.css?1708420257" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1708420257" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1708420257" rel="stylesheet">
-    <link href="/css/auto-complete.css?1708420257" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1708420257" rel="stylesheet">
-    <link href="/css/theme.css?1708420257" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1708420257" rel="stylesheet">
+    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
+    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
+    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
+    <link href="/css/theme.css?1715874358" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1708420257" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1708420257"></script>
+    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1708420257"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1708420257"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1708420257"></script>
+<script type="text/javascript" src="/js/search.js?1715874358"></script>
 
     
   </div>
@@ -384,7 +384,7 @@
   
     
     <li data-nav-id="/4-config-api-gw/4-2-setting-and-cors/" title="Setting and enable CORS" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>20-02-2024</font></i>
+        <i><font color=orange>17-05-2024</font></i>
     </left>
     <left>
         <br>
@@ -667,89 +667,86 @@
 
 	<p>In this section, we will add binary file support settings and enable CORS for the APIs</p>
 <ol>
-<li>Select <strong>Settings</strong> on the left menu.</li>
-</ol>
+<li>
+<p>Select <strong>API Settings</strong> on the left menu.</p>
 <ul>
-<li>Click <strong>Add Binary Media Type</strong></li>
+<li>Click <strong>Manage media types</strong>
+<img src="/images/1/55.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-23.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="2">
+</li>
+<li>
+<p>Click <strong>Add binary media type</strong></p>
+<ul>
 <li>Enter <strong>multipart/form-data</strong></li>
-</ol>
-<ul>
-<li>Click <strong>Save Changes</strong></li>
+<li>Click <strong>Save Changes</strong>
+<img src="/images/1/56.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-24.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="3">
-<li>After the setting is done, back to <strong>Resource</strong> on the left menu.</li>
-</ol>
+</li>
+<li>
+<p>After the setting is done, back to <strong>Resource</strong> on the left menu.</p>
 <ul>
 <li>Select <strong>/books</strong> resource</li>
-<li>Click <strong>Actions</strong></li>
-<li>Select <strong>Enable CORS</strong></li>
+<li>Select <strong>Enable CORS</strong>
+<img src="/images/1/57.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-25.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="4">
-<li>Click <strong>Enable CORS and replace existing CORS headers</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-26.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="5">
-<li>Click <strong>Yes, replace existing values</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-27.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>For <strong>Enable CORS</strong></p>
 <ul>
-<li>Enable CORS for successful GET and POST methods</li>
+<li>Choose <strong>GET</strong> and <strong>POST</strong> method</li>
+<li>Click <strong>Save</strong>
+<img src="/images/1/58.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-28.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="6">
-<li>Select <strong>books/{id}</strong> resource</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>/{id}</strong> resource</p>
 <ul>
-<li>Click <strong>Actions</strong></li>
-<li>Select <strong>Enable CORS</strong></li>
+<li>Select <strong>Enable CORS</strong>
+<img src="/images/1/59.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-29.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="7">
-<li>Click <strong>Enable CORS and replace existing CORS headers</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-30.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="8">
-<li>Click <strong>Yes, replace existing values</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-31.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>For <strong>Enable CORS</strong></p>
 <ul>
-<li>Enable CORS for successful DELETE method</li>
+<li>Choose <strong>DELETE</strong> method</li>
+<li>Click <strong>Save</strong>
+<img src="/images/1/60.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-32.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="9">
-<li>To front-end can use APIs, we need deploy APIs.</li>
-</ol>
+</li>
+<li>
+<p>To front-end can use APIs, we need deploy APIs.</p>
 <ul>
 <li>Select <strong>/</strong> resource</li>
-<li>Click <strong>Actions</strong></li>
-<li>Select <strong>Deploy API</strong></li>
+<li>Click <strong>Deploy API</strong>
+<img src="/images/1/61.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-33.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="10">
-<li>Select <strong>New stage</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-34.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="11">
-<li>Enter stage name, such as: <strong>staging</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-35.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="12">
-<li>Take note URL to call API</li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-36.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>Select <strong>New stage</strong>
+<img src="/images/1/62.png?width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>Enter stage name, such as: <strong>staging</strong></p>
 <ul>
-<li>URL of list and write API:</li>
+<li>Click <strong>Deploy</strong>
+<img src="/images/1/63.png?width=90pc" alt="CreateRestAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-37.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>Take note URL to call API
+<img src="/images/1/64.png?width=90pc" alt="CreateRestAPI"></p>
 <ul>
-<li>URL of delete API:</li>
+<li>
+<p>URL of list and write API:
+<img src="/images/1/65.png?width=90pc" alt="CreateRestAPI"></p>
+</li>
+<li>
+<p>URL of delete API:
+<img src="/images/1/67.png?width=90pc" alt="CreateRestAPI"></p>
+</li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-38.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
+</li>
+</ol>
 
 
 
@@ -1048,19 +1045,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1708420257"></script>
-    <script src="/js/jquery.sticky.js?1708420257"></script>
-    <script src="/js/featherlight.min.js?1708420257"></script>
-    <script src="/js/highlight.pack.js?1708420257"></script>
+    <script src="/js/clipboard.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
+    <script src="/js/jquery.sticky.js?1715874358"></script>
+    <script src="/js/featherlight.min.js?1715874358"></script>
+    <script src="/js/highlight.pack.js?1715874358"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1708420257"></script>
-    <script src="/js/learn.js?1708420257"></script>
-    <script src="/js/hugo-learn.js?1708420257"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
+    <script src="/js/learn.js?1715874358"></script>
+    <script src="/js/hugo-learn.js?1715874358"></script>
 
-    <link href="/mermaid/mermaid.css?1708420257" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1708420257"></script>
+    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1715874358"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.122.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create methods :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1708420257" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1708420257" rel="stylesheet">
-    <link href="/css/hybrid.css?1708420257" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1708420257" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1708420257" rel="stylesheet">
-    <link href="/css/auto-complete.css?1708420257" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1708420257" rel="stylesheet">
-    <link href="/css/theme.css?1708420257" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1708420257" rel="stylesheet">
+    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
+    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
+    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
+    <link href="/css/theme.css?1715874358" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1708420257" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1708420257"></script>
+    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1708420257"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1708420257"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1708420257"></script>
+<script type="text/javascript" src="/js/search.js?1715874358"></script>
 
     
   </div>
@@ -356,7 +356,7 @@
   
     
     <li data-nav-id="/4-config-api-gw/4-1-create-methods/" title="Create methods" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>20-02-2024</font></i>
+        <i><font color=orange>17-05-2024</font></i>
     </left>
     <left>
         <br>
@@ -675,93 +675,78 @@
 
 	<h4 id="create-list-api">Create list API</h4>
 <ol>
-<li>Click <strong>Actions</strong>, then select <strong>Create method</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-8.png?featherlight=false&amp;width=90pc" alt="CreateListAPI"></p>
-<ol start="2">
-<li>Select <strong>GET</strong> method</li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-9.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="3">
-<li>Click to &ldquo;check&rdquo; icon</li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-10.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="4">
-<li>Select <strong>Lambda Function</strong> for <strong>Integration type</strong></li>
-</ol>
+<li>
+<p>Click <strong>/books</strong>, then select <strong>Create method</strong>
+<img src="/images/1/44.png?width=90pc" alt="CreateListAPI"></p>
+</li>
+<li>
+<p>In the Method detail</p>
 <ul>
+<li>Select <strong>GET</strong> method</li>
+<li>Select <strong>Lambda Function</strong> for <strong>Integration type</strong></li>
 <li>Check to <strong>Use Lambda Proxy integration</strong></li>
 <li>Enter Lambda function name to be integrated: <strong>books_list</strong></li>
-<li>Click <strong>Save</strong></li>
+<li>Click <strong>Save</strong>
+<img src="/images/1/45.png?width=90pc" alt="CreateListAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-11.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="5">
-<li>Click <strong>OK</strong></li>
+</li>
+<li>
+<p>Click <strong>Create method</strong>
+<img src="/images/1/46.png?width=90pc" alt="CreateListAPI"></p>
+</li>
 </ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-12.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
 <h4 id="create-write-api">Create write API</h4>
 <ol>
-<li>Click <strong>Actions</strong>, then select <strong>Create method</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-13.png?featherlight=false&amp;width=90pc" alt="CreateListAPI"></p>
-<ol start="2">
-<li>Select <strong>POST</strong> method</li>
-</ol>
+<li>Click <strong>/books</strong>, then select <strong>Create method</strong>
+<img src="/images/1/47.png?width=90pc" alt="CreateListAPI"></li>
+<li>In the Method detail
 <ul>
-<li>Click to &ldquo;check&rdquo; icon</li>
-</ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-14.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="3">
+<li>Select <strong>GET</strong> method</li>
 <li>Select <strong>Lambda Function</strong> for <strong>Integration type</strong></li>
-</ol>
-<ul>
 <li>Check to <strong>Use Lambda Proxy integration</strong></li>
-<li>Enter Lambda function name to be integrated: <strong>book_create</strong></li>
-<li>Click <strong>Save</strong></li>
+<li>Enter Lambda function name to be integrated: <strong>books_list</strong></li>
+<li>Click <strong>Save</strong>
+<img src="/images/1/48.png?width=90pc" alt="CreateListAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-15.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="4">
-<li>Click <strong>OK</strong></li>
+</li>
+<li>Click <strong>Create method</strong>
+<img src="/images/1/49.png?width=90pc" alt="CreateListAPI"></li>
 </ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-16.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
 <h4 id="create-delete-api">Create delete API</h4>
 <ol>
-<li>Click <strong>Actions</strong>, then select <strong>Create Resource</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-17.png?featherlight=false&amp;width=90pc" alt="CreateListAPI"></p>
-<ol start="2">
-<li>Enter <strong>id</strong> for <strong>Resource name</strong> pattern</li>
-</ol>
+<li>
+<p>Click <strong>/books</strong>, then select <strong>Create Resource</strong>
+<img src="/images/1/50.png?width=90pc" alt="CreateListAPI"></p>
+</li>
+<li>
+<p>For <strong>Create Resource</strong></p>
 <ul>
-<li>Enter <strong>{id}</strong> for <strong>Resource path</strong> pattern</li>
-<li>Click <strong>Create Resource</strong></li>
+<li>Enter <strong>{id}</strong> for <strong>Resource name</strong> pattern</li>
+<li>Click <strong>Create Resource</strong>
+<img src="/images/1/51.png?width=90pc" alt="CreateListAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-18.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="3">
-<li>Click <strong>Actions</strong>, then select <strong>Create method</strong></li>
-</ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-19.png?featherlight=false&amp;width=90pc" alt="CreateListAPI"></p>
-<ol start="4">
+</li>
+<li>
+<p>Click <strong>/{id}</strong>, then select <strong>Create method</strong>
+<img src="/images/1/52.png?width=90pc" alt="CreateListAPI"></p>
+</li>
+<li>
+<p>For <strong>Method detail</strong></p>
+<ul>
 <li>Select method <strong>DELETE</strong></li>
-</ol>
-<ul>
-<li>Click to &ldquo;check&rdquo; icon</li>
-</ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-20.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="5">
 <li>Select <strong>Lambda Function</strong> for <strong>Integration type</strong></li>
-</ol>
-<ul>
 <li>Check to <strong>Use Lambda Proxy integration</strong></li>
 <li>Enter Lambda function name to be integrated: <strong>book_delete</strong></li>
-<li>Click <strong>Save</strong></li>
+<li>Click <strong>Save</strong>
+<img src="/images/1/53.png?width=90pc" alt="CreateListAPI"></li>
 </ul>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-21.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<ol start="6">
-<li>Click <strong>OK</strong></li>
+</li>
+<li>
+<p>Click <strong>Create method</strong>
+<img src="/images/1/54.png?width=90pc" alt="CreateListAPI">
+So, we have created the APIs that interact with Lambda functions.</p>
+</li>
 </ol>
-<p><img src="/images/4-config-api-gw/4-config-api-gw-22.png?featherlight=false&amp;width=90pc" alt="CreateRestAPI"></p>
-<p>So, we have created the APIs that interact with Lambda functions.</p>
 
 
 
@@ -1057,19 +1042,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1708420257"></script>
-    <script src="/js/jquery.sticky.js?1708420257"></script>
-    <script src="/js/featherlight.min.js?1708420257"></script>
-    <script src="/js/highlight.pack.js?1708420257"></script>
+    <script src="/js/clipboard.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
+    <script src="/js/jquery.sticky.js?1715874358"></script>
+    <script src="/js/featherlight.min.js?1715874358"></script>
+    <script src="/js/highlight.pack.js?1715874358"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1708420257"></script>
-    <script src="/js/learn.js?1708420257"></script>
-    <script src="/js/hugo-learn.js?1708420257"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
+    <script src="/js/learn.js?1715874358"></script>
+    <script src="/js/hugo-learn.js?1715874358"></script>
 
-    <link href="/mermaid/mermaid.css?1708420257" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1708420257"></script>
+    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1715874358"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

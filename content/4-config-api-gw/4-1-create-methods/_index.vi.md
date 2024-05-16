@@ -6,80 +6,52 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 #### Tạo API đọc
-1. Ấn nút **Actions**, sau đó chọn **Create method**
+1. Ấn nút **/books**, sau đó chọn **Create method**
+![CreateListAPI](/images/1/44.png?width=90pc)
+2. Tại mục **Method detail** 
+    - Chọn method **GET**
+    - Chọn **Lambda Function** cho **Integration type**
+    - Tích vào mục **Use Lambda Proxy integration**
+    - Nhập tên của Lambda function cần tích hợp: **books_list**
+    - Ấn nút **Save**
+![CreateListAPI](/images/1/45.png?width=90pc)
 
-![CreateListAPI](/images/4-config-api-gw/4-config-api-gw-8.png?featherlight=false&width=90pc)
-
-2. Chọn method **GET**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-9.png?featherlight=false&width=90pc)
-
-3. Ấn vào biểu tượng "check" như hình
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-10.png?featherlight=false&width=90pc)
-
-4. Chọn **Lambda Function** cho **Integration type**
-- Tích vào mục **Use Lambda Proxy integration**
-- Nhập tên của Lambda function cần tích hợp: **books_list**
-- Ấn nút **Save**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-11.png?featherlight=false&width=90pc)
-
-5. Ấn nút **OK**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-12.png?featherlight=false&width=90pc)
+3. Click **Create method**
+![CreateListAPI](/images/1/46.png?width=90pc)
 
 #### Tạo API ghi
-1. Ấn nút **Actions**, sau đó chọn **Create method**
+1. Ấn nút **/books**, sau đó chọn **Create method**
+![CreateListAPI](/images/1/47.png?width=90pc)
 
-![CreateListAPI](/images/4-config-api-gw/4-config-api-gw-13.png?featherlight=false&width=90pc)
+2. Tại mục **Method detail** 
+    - Chọn method **POST**
+    - Chọn **Lambda Function** cho **Integration type**
+    - Tích vào mục **Use Lambda Proxy integration**
+    - Nhập tên của Lambda function cần tích hợp: **books_list**
+    - Ấn nút **Save**
+![CreateListAPI](/images/1/48.png?width=90pc)
 
-2. Chọn method **POST**
-- Ấn vào biểu tượng "check" như hình
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-14.png?featherlight=false&width=90pc)
-
-3. Chọn **Lambda Function** cho **Integration type**
-- Tích vào mục **Use Lambda Proxy integration**
-- Nhập tên của Lambda function cần tích hợp: **book_create**
-- Ấn nút **Save**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-15.png?featherlight=false&width=90pc)
-
-4. Ấn nút **OK**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-16.png?featherlight=false&width=90pc)
+3. Click **Create method**
+![CreateListAPI](/images/1/49.png?width=90pc)
 
 #### Tạo API xoá
 
-1. Ấn nút **Actions**, sau đó chọn **Create Resource**
+1. Ấn nút **/books**, sau đó chọn **Create Resource**
+![CreateListAPI](/images/1/50.png?width=90pc)
 
-![CreateListAPI](/images/4-config-api-gw/4-config-api-gw-17.png?featherlight=false&width=90pc)
-
-2. Nhập **id** cho mục **Resource name**
-- Nhập **{id}** cho mục **Resource path**
-- Ấn nút **Create Resource**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-18.png?featherlight=false&width=90pc)
-
-3. Ấn nút **Actions**, sau đó chọn **Create method**
-
-![CreateListAPI](/images/4-config-api-gw/4-config-api-gw-19.png?featherlight=false&width=90pc)
-
-4. Chọn method **DELETE**
-- Ấn vào biểu tượng "check" như hình
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-20.png?featherlight=false&width=90pc)
-
-5. Chọn **Lambda Function** cho **Integration type**
-- Tích vào mục **Use Lambda Proxy integration**
-- Nhập tên của Lambda function cần tích hợp: **book_delete**
-- Ấn nút **Save**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-21.png?featherlight=false&width=90pc)
-
-6. Ấn nút **OK**
-
-![CreateRestAPI](/images/4-config-api-gw/4-config-api-gw-22.png?featherlight=false&width=90pc)
-
+2. Tại phần **Create Resource**
+    - Nhập **{id}** cho mục **Resource name**
+    - Ấn nút **Create Resource**
+![CreateListAPI](/images/1/51.png?width=90pc)
+3. Nhấn vào **/{id}**, sau đó chọn **Create method**
+![CreateListAPI](/images/1/52.png?width=90pc)
+4. **Tại mục Method detail**
+    - Chọn method **DELETE**
+    - Chọn **Lambda Function** cho **Integration type**
+    - Tích vào mục **Use Lambda Proxy integration**
+    - Nhập tên của Lambda function cần tích hợp: **book_delete**
+    - Ấn nút **Save**
+![CreateListAPI](/images/1/53.png?width=90pc)
+5. Nhấn vào **Create method**
+![CreateListAPI](/images/1/54.png?width=90pc)
 Vậy là chúng ta đã tạo xong các API tương tác với Lambda function.

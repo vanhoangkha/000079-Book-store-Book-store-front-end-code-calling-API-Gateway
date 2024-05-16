@@ -12,7 +12,7 @@ In the last post, we know how to create and use Lambda functions that interact w
 
 The architecture of the application we will build:
 
-![WebArchitect](/images/serverless-architect-diagram.png?featherlight=false&width=50pc)
+![WebArchitect](/images/serverless-architect-diagram.png?width=50pc)
 
 #### Content
 

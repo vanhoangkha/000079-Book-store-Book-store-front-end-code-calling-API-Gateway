@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.122.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Listing Lambda function :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1708420257" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1708420257" rel="stylesheet">
-    <link href="/css/hybrid.css?1708420257" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1708420257" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1708420257" rel="stylesheet">
-    <link href="/css/auto-complete.css?1708420257" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1708420257" rel="stylesheet">
-    <link href="/css/theme.css?1708420257" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1708420257" rel="stylesheet">
+    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
+    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
+    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
+    <link href="/css/theme.css?1715874358" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1708420257" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1708420257"></script>
+    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1708420257"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1708420257"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1708420257"></script>
+<script type="text/javascript" src="/js/search.js?1715874358"></script>
 
     
   </div>
@@ -253,7 +253,7 @@
   
     
     <li data-nav-id="/3-deploy-lambda-function/3-2-deploy-lambda-function/3-2-2-list-data-function/" title="Listing Lambda function" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>20-02-2024</font></i>
+        <i><font color=orange>17-05-2024</font></i>
     </left>
     <left>
         <br>
@@ -673,20 +673,20 @@
 
 	<p>We will create a Lambda function that reads all the data in the DynamoDB table:</p>
 <ol>
-<li>Click <strong>Create function</strong></li>
-</ol>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-9.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ol start="2">
-<li>Enter function name, such as: <strong>books_list</strong></li>
-</ol>
+<li>
+<p>Click <strong>Create function</strong>
+<img src="/images/1/25.png?width=90pc" alt="LambdaListFunction"></p>
+</li>
+<li>
+<p>Enter function name, such as: <strong>books_list</strong></p>
 <ul>
 <li>Select <strong>Python 3.9</strong> for <strong>Runtime</strong> pattern</li>
-<li>Click <strong>Create function</strong></li>
+<li>Click <strong>Create function</strong>
+<img src="/images/1/26.png?width=90pc" alt="LambdaListFunction"></li>
 </ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-10.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ol start="3">
-<li>Copy the below code block and paste to <strong>lambda_function.py</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Copy the below code block and paste to <strong>lambda_function.py</strong>.</p>
 <pre tabindex="0"><code>import json
 import boto3
 from decimal import *
@@ -700,7 +700,7 @@ class DecimalEncoder(json.JSONEncoder):
         if isinstance(obj, Decimal):
             return str(obj)
         return json.JSONEncoder.default(self, obj)
-            
+
 def deserialize(data):
     if isinstance(data, list):
         return [deserialize(v) for v in data]
@@ -731,7 +731,7 @@ def lambda_handler(event, context):
         format_data_comment = deserialize(data_comment[&#39;Items&#39;])
         print(data_comment[&#39;Items&#39;])
         book[&#34;comments&#34;] = format_data_comment
-            
+
     print (format_data_books)
     return {
         &#34;statusCode&#34;: 200,
@@ -744,29 +744,32 @@ def lambda_handler(event, context):
         &#34;body&#34;: json.dumps(format_data_books, cls=DecimalEncoder)
     }
 </code></pre><ul>
-<li>Click <strong>Deploy</strong></li>
+<li>Click <strong>Deploy</strong>
+<img src="/images/1/27.png?width=90pc" alt="LambdaListFunction"></li>
 </ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-11.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ol start="4">
-<li>Next, give the function permission to read data from DynamoDB</li>
-</ol>
+</li>
+<li>
+<p>Next, give the function permission to read data from DynamoDB</p>
 <ul>
-<li>Click <strong>Configuration</strong> tab</li>
-<li>Select <strong>Permissions</strong> pattern on the left menu</li>
-<li>Click on the role the function is executing</li>
-</ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-12.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ul>
-<li>Click on the existing policy that starts with <strong>AWSLambdaExecutionRole-</strong></li>
-</ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-13.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ul>
-<li>Click <strong>Edit policy</strong></li>
-</ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-14.png?featherlight=false&amp;width=90pc" alt="LambdaListFunction"></p>
-<ul>
-<li>Click <strong>JSON</strong> tab and add the below json block:</li>
-</ul>
+<li>
+<p>Click <strong>Configuration</strong> tab</p>
+</li>
+<li>
+<p>Select <strong>Permissions</strong> pattern on the left menu</p>
+</li>
+<li>
+<p>Click on the role the function is executing
+<img src="/images/1/28.png?width=90pc" alt="LambdaListFunction"></p>
+</li>
+<li>
+<p>Click on the existing policy that starts with <strong>AWSLambdaExecutionRole-</strong></p>
+</li>
+<li>
+<p>Click <strong>Edit policy</strong>
+<img src="/images/1/29.png?width=90pc" alt="LambdaListFunction"></p>
+</li>
+<li>
+<p>Click <strong>JSON</strong> tab and add the below json block:</p>
 <pre tabindex="0"><code>,
         {
             &#34;Effect&#34;: &#34;Allow&#34;,
@@ -776,16 +779,24 @@ def lambda_handler(event, context):
             ],
             &#34;Resource&#34;: &#34;arn:aws:dynamodb:AWS_REGION:ACCOUNT_ID:table/Books&#34;
         }
-</code></pre><ul>
-<li>Replace <strong>AWS_REGION</strong> with the region where you create the table in DynamoDB, such as: <strong>ap-southeast-2</strong></li>
-<li>Replace <strong>ACCOUNT_ID</strong> with your account id</li>
-<li>Click <strong>Review policy</strong></li>
+</code></pre></li>
+<li>
+<p>Replace <strong>AWS_REGION</strong> with the region where you create the table in DynamoDB, such as: <strong>ap-southeast-2</strong></p>
+</li>
+<li>
+<p>Replace <strong>ACCOUNT_ID</strong> with your account id</p>
+</li>
+<li>
+<p>Click <strong>Review policy</strong>
+<img src="/images/1/30.png?width=90pc" alt="LambdaListFunction"></p>
+</li>
+<li>
+<p>Review the settings and click <strong>Save changes</strong>
+<img src="/images/1/31.png?width=90pc" alt="LambdaListFunction"></p>
+</li>
 </ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-15.png?featherlight=false&amp;width=90pc" alt="LambdaCreateFunction"></p>
-<ul>
-<li>Review the settings and click <strong>Save changes</strong></li>
-</ul>
-<p><img src="/images/3-deploy-lambda-function/3-2-deploy-lambda-function-16.png?featherlight=false&amp;width=90pc" alt="LambdaCreateFunction"></p>
+</li>
+</ol>
 
 
 
@@ -1088,19 +1099,19 @@ def lambda_handler(event, context):
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.min.js?1708420257"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1708420257"></script>
-    <script src="/js/jquery.sticky.js?1708420257"></script>
-    <script src="/js/featherlight.min.js?1708420257"></script>
-    <script src="/js/highlight.pack.js?1708420257"></script>
+    <script src="/js/clipboard.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
+    <script src="/js/jquery.sticky.js?1715874358"></script>
+    <script src="/js/featherlight.min.js?1715874358"></script>
+    <script src="/js/highlight.pack.js?1715874358"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1708420257"></script>
-    <script src="/js/learn.js?1708420257"></script>
-    <script src="/js/hugo-learn.js?1708420257"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
+    <script src="/js/learn.js?1715874358"></script>
+    <script src="/js/hugo-learn.js?1715874358"></script>
 
-    <link href="/mermaid/mermaid.css?1708420257" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1708420257"></script>
+    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1715874358"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
