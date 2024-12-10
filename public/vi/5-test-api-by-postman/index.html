@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Kiểm tra API với Postman :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
-    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
-    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
-    <link href="/css/theme.css?1715874358" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
+    <link href="/css/nucleus.css?1733815161" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733815161" rel="stylesheet">
+    <link href="/css/hybrid.css?1733815161" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733815161" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733815161" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733815161" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733815161" rel="stylesheet">
+    <link href="/css/theme.css?1733815161" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733815161" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733815161" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733815161"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733815161"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733815161"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1715874358"></script>
+<script type="text/javascript" src="/js/search.js?1733815161"></script>
 
     
   </div>
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>17-05-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -675,7 +675,7 @@
 <li>Chọn <strong>GET</strong> method</li>
 <li>Nhập InvokURL của GET API đã ghi lại từ bước trước</li>
 <li>Ấn nút <strong>Send</strong>
-<img src="/images/1/68.png?width=90pc" alt="TestListAPI">
+<img alt="TestListAPI" src="/images/1/68.png?width=90pc">
 Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</strong> đã qua xử lý</li>
 </ul>
 </li>
@@ -701,7 +701,7 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
 }
 </code></pre><ul>
 <li>Đợi một chút, xem kết quả trả về
-<img src="/images/1/69.png?width=90pc" alt="TestListAPI"></li>
+<img alt="TestListAPI" src="/images/1/69.png?width=90pc"></li>
 </ul>
 </li>
 </ul>
@@ -711,11 +711,11 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
 <ul>
 <li>
 <p>Trước khi gọi API ghi
-<img src="/images/1/70.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/70.png?width=90pc"></p>
 </li>
 <li>
 <p>Sau khi gọi API ghi
-<img src="/images/1/71.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/71.png?width=90pc"></p>
 </li>
 </ul>
 </li>
@@ -724,15 +724,15 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
 <p>Vì Lambda function xoá khi thực hiện sẽ xoá ảnh được tải lên bởi người dùng, nên chúng ta tải thủ công ảnh lên S3 bucket để API có thể chạy đúng.</p>
 <ol>
 <li>
-<p>Mở bảng điều khiển của <a href="https://s3.console.aws.amazon.com/s3/buckets?region=ap-southeast-2&amp;region=ap-southeast-2">Amazon S3</a></p>
+<p>Mở bảng điều khiển của <a href="https://s3.console.aws.amazon.com/s3/buckets?region=ap-southeast-2&region=ap-southeast-2">Amazon S3</a></p>
 </li>
 <li>
 <p>Ấn vào bucket <strong>book-image-store</strong>, sau đó nhấn nút <strong>Upload</strong>
-<img src="/images/1/72.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/72.png?width=90pc"></p>
 </li>
 <li>
 <p>Ấn nút <strong>Add files</strong>
-<img src="/images/1/73.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/73.png?width=90pc"></p>
 </li>
 <li>
 <p>Tải ảnh sau về máy của bạn và chọn nó để tải lên bucket
@@ -767,11 +767,11 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
 </li>
 <li>
 <p>Ấn nút <strong>Upload</strong>
-<img src="/images/1/74.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/74.png?width=90pc"></p>
 </li>
 <li>
 <p>Sau khi tải xong, chuyển sang bucket <strong>book-image-resize-store</strong> kiểm tra. Đây là kết quả chạy của reszie_image Lambda funtion
-<img src="/images/1/75.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/75.png?width=90pc"></p>
 </li>
 <li>
 <p>Trở lại với Postman, thêm một tab mới để thực hiện API xoá</p>
@@ -782,16 +782,16 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
 <li>Nhập InvokeURL của DELETE API đã ghi lại từ bước trước, thay <strong>/{id}</strong> bằng <strong>/5</strong></li>
 <li>Ấn nút <strong>Send</strong></li>
 <li>Kiểm tra kết quả trả về:
-<img src="/images/1/76.png?width=90pc" alt="TestListAPI"></li>
+<img alt="TestListAPI" src="/images/1/76.png?width=90pc"></li>
 </ul>
 <ol start="10">
 <li>
 <p>Mở bảng <strong>Books</strong> trong bảng điều khiển của DynamoDB kiểm tra dữ liệu
-<img src="/images/1/77.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/77.png?width=90pc"></p>
 </li>
 <li>
 <p>Mở bucket <strong>book-image-resize-store</strong> kiểm tra kết quả. Ảnh <strong>aws.jpg</strong> đã xoá.
-<img src="/images/1/78.png?width=90pc" alt="TestListAPI"></p>
+<img alt="TestListAPI" src="/images/1/78.png?width=90pc"></p>
 </li>
 </ol>
 
@@ -1088,19 +1088,19 @@ Kết quả trả về là toàn bộ dữ liệu của bảng <strong>Books</st
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1715874358"></script>
-    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
-    <script src="/js/jquery.sticky.js?1715874358"></script>
-    <script src="/js/featherlight.min.js?1715874358"></script>
-    <script src="/js/highlight.pack.js?1715874358"></script>
+    <script src="/js/clipboard.min.js?1733815161"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733815161"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733815161"></script>
+    <script src="/js/jquery.sticky.js?1733815161"></script>
+    <script src="/js/featherlight.min.js?1733815161"></script>
+    <script src="/js/highlight.pack.js?1733815161"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
-    <script src="/js/learn.js?1715874358"></script>
-    <script src="/js/hugo-learn.js?1715874358"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733815161"></script>
+    <script src="/js/learn.js?1733815161"></script>
+    <script src="/js/hugo-learn.js?1733815161"></script>
 
-    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1715874358"></script>
+    <link href="/mermaid/mermaid.css?1733815161" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733815161"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

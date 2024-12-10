@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Kiểm tra API với front-end :: Serverless - Build Frontend to call API Gateway</title>
 
     
-    <link href="/css/nucleus.css?1715874358" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1715874358" rel="stylesheet">
-    <link href="/css/hybrid.css?1715874358" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1715874358" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1715874358" rel="stylesheet">
-    <link href="/css/auto-complete.css?1715874358" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1715874358" rel="stylesheet">
-    <link href="/css/theme.css?1715874358" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1715874358" rel="stylesheet">
+    <link href="/css/nucleus.css?1733815161" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733815161" rel="stylesheet">
+    <link href="/css/hybrid.css?1733815161" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733815161" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733815161" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733815161" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733815161" rel="stylesheet">
+    <link href="/css/theme.css?1733815161" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733815161" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1715874358" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733815161" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1715874358"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733815161"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1715874358"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1715874358"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733815161"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733815161"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1715874358"></script>
+<script type="text/javascript" src="/js/search.js?1733815161"></script>
 
     
   </div>
@@ -575,7 +575,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>17-05-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -665,8 +665,8 @@
 <p>Mở tệp <strong>config.js</strong> trong thư mục <strong>fcj-serverless-frontend</strong> đã được tải về từ phần 2</p>
 <ul>
 <li>Thay giá trị cho <strong>APP_API_URL</strong> bằng URL của bạn:
-<img src="/images/1/79.png?width=90pc" alt="CreateRestAPI">
-<img src="/images/1/80.png?width=90pc" alt="CreateRestAPI"></li>
+<img alt="CreateRestAPI" src="/images/1/79.png?width=90pc">
+<img alt="CreateRestAPI" src="/images/1/80.png?width=90pc"></li>
 </ul>
 </li>
 <li>
@@ -679,7 +679,7 @@ aws s3 cp build s3://fcj-book-store --recursive
 </code></pre></li>
 <li>
 <p>Dán endpoint của S3 static web vào browser của bạn. Ứng dụng đã hiện thông tin sách, nhưng vẫn chưa có ảnh vì chúng ta chưa tải ảnh lên.
-<img src="/images/1/81.png?width=90pc" alt="CreateRestAPI">
+<img alt="CreateRestAPI" src="/images/1/81.png?width=90pc">
 Vậy API đọc dữ liệu đã hoạt động đúng.</p>
 </li>
 <li>
@@ -690,7 +690,7 @@ Vậy API đọc dữ liệu đã hoạt động đúng.</p>
 </li>
 <li>
 <p>Ấn nút <strong>Update</strong>
-<img src="/images/1/82.png?width=90pc" alt="CreateRestAPI"></p>
+<img alt="CreateRestAPI" src="/images/1/82.png?width=90pc"></p>
 </li>
 <li>
 <p>Sửa bất kỳ thông tin gì bạn muốn trừ <strong>id</strong></p>
@@ -744,11 +744,11 @@ Vậy API đọc dữ liệu đã hoạt động đúng.</p>
 </li>
 <li>
 <p>Ấn nút <strong>OK</strong>
-<img src="/images/1/83.png?width=90pc" alt="CreateRestAPI"></p>
+<img alt="CreateRestAPI" src="/images/1/83.png?width=90pc"></p>
 </li>
 <li>
 <p>Ảnh và thông tin được cập nhật
-<img src="/images/1/84.png?width=90pc" alt="CreateRestAPI"></p>
+<img alt="CreateRestAPI" src="/images/1/84.png?width=90pc"></p>
 </li>
 <li>
 <p>Ấn sang tab <strong>Create new book</strong> ghi dữ liệu mới vào cơ sở dữ liệu</p>
@@ -814,9 +814,9 @@ Vậy API đọc dữ liệu đã hoạt động đúng.</p>
 <li>Ấn nút <strong>Choose File</strong> để tải ảnh lên</li>
 <li>Ấn nút <strong>Create</strong></li>
 <li>Ấn nút <strong>OK</strong>
-<img src="/images/1/86.png?width=90pc" alt="CreateRestAPI"></li>
+<img alt="CreateRestAPI" src="/images/1/86.png?width=90pc"></li>
 <li>Hiển thị thông tin vừa tạo
-<img src="/images/1/87.png?width=90pc" alt="CreateRestAPI"></li>
+<img alt="CreateRestAPI" src="/images/1/87.png?width=90pc"></li>
 </ul>
 </li>
 <li>
@@ -827,18 +827,18 @@ Vậy API đọc dữ liệu đã hoạt động đúng.</p>
 </li>
 <li>
 <p>Ấn nút <strong>Update</strong>
-<img src="/images/1/88.png?width=90pc" alt="CreateRestAPI"></p>
+<img alt="CreateRestAPI" src="/images/1/88.png?width=90pc"></p>
 </li>
 <li>
 <p>Ấn nút <strong>Delete</strong></p>
 </li>
 <li>
 <p>Ấn nút <strong>OK</strong> để xác nhận xoá
-<img src="/images/1/89.png?width=90pc" alt="CreateRestAPI"></p>
+<img alt="CreateRestAPI" src="/images/1/89.png?width=90pc"></p>
 </li>
 <li>
 <p>Xem kết quả sau khi xoá: không còn xuất hiện thông tin sách nữa
-<img src="/images/1/90.png?width=90pc" alt="CreateRestAPI">
+<img alt="CreateRestAPI" src="/images/1/90.png?width=90pc">
 Chúng ta đã hoàn thành việc xây dựng một ứng dụng web đơn giản theo mô hình serverless. Để xây dựng ứng dụng serverless nhanh hơn, trong phần tiếp theo chúng ta sẽ sử dụng AWS Serverless Application Model (SAM). SAM cung cấp cú pháp để diễn đạt các hàm, API, cơ sở dữ liệu và event source mappings.</p>
 </li>
 </ul>
@@ -1138,19 +1138,19 @@ Chúng ta đã hoàn thành việc xây dựng một ứng dụng web đơn gi�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1715874358"></script>
-    <script src="/js/perfect-scrollbar.min.js?1715874358"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1715874358"></script>
-    <script src="/js/jquery.sticky.js?1715874358"></script>
-    <script src="/js/featherlight.min.js?1715874358"></script>
-    <script src="/js/highlight.pack.js?1715874358"></script>
+    <script src="/js/clipboard.min.js?1733815161"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733815161"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733815161"></script>
+    <script src="/js/jquery.sticky.js?1733815161"></script>
+    <script src="/js/featherlight.min.js?1733815161"></script>
+    <script src="/js/highlight.pack.js?1733815161"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1715874358"></script>
-    <script src="/js/learn.js?1715874358"></script>
-    <script src="/js/hugo-learn.js?1715874358"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733815161"></script>
+    <script src="/js/learn.js?1733815161"></script>
+    <script src="/js/hugo-learn.js?1733815161"></script>
 
-    <link href="/mermaid/mermaid.css?1715874358" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1715874358"></script>
+    <link href="/mermaid/mermaid.css?1733815161" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733815161"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
